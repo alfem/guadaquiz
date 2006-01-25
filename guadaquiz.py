@@ -5,6 +5,7 @@ import pygtk
 pygtk.require ('2.0')
 import gtk
 import gtk.glade
+import pango
 import os
 import commands
 import random
@@ -30,8 +31,17 @@ class appgui:
 		self.xml.signal_autoconnect (dic)
 		self.window = self.xml.get_widget('window1')
 		self.window.set_size_request(800,600)
+	
+		qfont=pango.FontDescription('Sans 15')
+		afont=pango.FontDescription('Sans 14')
+
 		self.question = self.xml.get_widget('question')
+		self.question.modify_font(qfont)
+
 		self.answers = self.xml.get_widget('answers')
+		self.answers.modify_font(afont)
+
+
 		self.counter = self.xml.get_widget('counter')
 		self.rightanswer=""
 		self.appdir=os.path.dirname(sys.argv[0])
@@ -62,6 +72,7 @@ class appgui:
 		self.ok=0
 		self.wrong=0
 		self.show_counter()
+		self.show_another_question()
 
 	def show_counter(self):
 		self.counter.set_text("%d Bien\n%d Mal" % (self.ok,self.wrong))
