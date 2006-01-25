@@ -78,6 +78,7 @@ class appgui:
 		self.show_counter()
 
 	def show_another_question(self):
+		questionfile=""
 		while questionfile[0:1] != "q":
 			questionfile=random.choice(self.questionfiles)
                 try:
