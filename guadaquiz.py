@@ -78,7 +78,8 @@ class appgui:
 		self.show_counter()
 
 	def show_another_question(self):
-		questionfile=random.choice(self.questionfiles)
+		while questionfile[0:1] != "q":
+			questionfile=random.choice(self.questionfiles)
                 try:
 			qfile=open(self.appdir+"/questions/"+questionfile)
 		except:
