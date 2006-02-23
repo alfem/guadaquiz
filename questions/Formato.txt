@@ -1,16 +1,11 @@
+Las preguntas y sus respuestas deben ir en este directorio.
 
-FORMATO DE LAS PREGUNTAS Y RESPUESTAS
+Los ficheros deben comenzar por "q" seguidos de cualquier cosa. 
 
-Las preguntas y sus respuestas deben ir en este directorio "./questions".
-
-Los ficheros deben comenzar por "q" seguidos de cualquier cosa. Cualquier
-otro fichero se ignorará (como éste que estás leyendo).
-
-Cada fichero de preguntas contiene exactamente:
-
-* Una línea con la pregunta.
-* Tres líneas con tres posibles respuestas.
-* Una línea con la letra (mayúscula) correspondiente a la respuesta acertada.
+Cada fichero contiene:
+Una línea con la pregunta.
+Tres líneas con tres posibles respuestas.
+Una línea con la letra (mayúscula) correspondiente a la respuesta acertada.
 
 Y eso es todo. 
 
