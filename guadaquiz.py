@@ -30,7 +30,7 @@ class appgui:
 		self.xml = gtk.glade.XML("guadaquiz.glade")
 		self.xml.signal_autoconnect (dic)
 		self.window = self.xml.get_widget('window1')
-		self.window.set_size_request(800,600)
+		self.window.set_size_request(1024,768)
 	
 		qfont=pango.FontDescription('Sans 15')
 		afont=pango.FontDescription('Sans 14')
@@ -53,20 +53,20 @@ class appgui:
 		return
 
 	def bt_a_clicked(self,widget):
-		widget.set_sensitive(False)
+#		widget.set_sensitive(False)
 		self.check_answer("A")
 		self.show_another_question()
-		widget.set_sensitive(True)
+#		widget.set_sensitive(True)
 	def bt_b_clicked(self,widget):
-		widget.set_sensitive(False)
+#		widget.set_sensitive(False)
 		self.check_answer("B")
 		self.show_another_question()
-		widget.set_sensitive(True)
+#		widget.set_sensitive(True)
 	def bt_c_clicked(self,widget):
-		widget.set_sensitive(False)
+#		widget.set_sensitive(False)
 		self.check_answer("C")
 		self.show_another_question()
-		widget.set_sensitive(True)
+#		widget.set_sensitive(True)
 
 	def bt_restart_clicked(self,widget):
 		self.ok=0
