@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# -*- coding: iso-8859-1 -*-
 
 import pygtk 
 pygtk.require ('2.0')
@@ -96,7 +95,8 @@ class appgui:
 			qfile=open(self.appdir+"/questions/"+questionfile)
 		except:
 			sys.exit("ERROR: can't open question file "+questionfile)
-		question=unicode(qfile.readline(),'Latin-1')
+#		question=unicode(qfile.readline(),'Latin-1')
+		question=qfile.readline()
 		answer1=qfile.readline()
 		answer2=qfile.readline()
 		answer3=qfile.readline()
