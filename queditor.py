@@ -92,7 +92,7 @@ class Appgui:
 		self.treeview.set_model(model=self.questions.liststore)
 
 	        # Add columns to treeview
-	        column = gtk.TreeViewColumn('Nº')
+	        column = gtk.TreeViewColumn('N.')
        		self.treeview.append_column(column)
 	        cell = gtk.CellRendererText()
                 column.pack_start(cell, True)
