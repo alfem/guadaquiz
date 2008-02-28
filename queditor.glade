@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.0.2 on Tue Feb 26 09:50:38 2008 by alfem@alfem-tablet-->
+<!--Generated with glade3 3.0.2 on Thu Feb 28 20:31:52 2008 by alfem@alfem-evo-->
 <glade-interface>
   <widget class="GtkWindow" id="win_main">
     <property name="visible">True</property>
     <property name="title" translatable="yes">Queditor</property>
+    <property name="default_height">500</property>
     <signal name="destroy" handler="on_win_main_destroy"/>
     <child>
       <widget class="GtkVBox" id="vbox1">
@@ -90,10 +91,17 @@
           </packing>
         </child>
         <child>
-          <widget class="GtkTreeView" id="tree_questions">
+          <widget class="GtkScrolledWindow" id="scrolledwindow1">
             <property name="visible">True</property>
-            <property name="search_column">1</property>
-            <signal name="row_activated" handler="on_tree_questions_row_activated"/>
+            <property name="hscrollbar_policy">GTK_POLICY_NEVER</property>
+            <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+            <child>
+              <widget class="GtkTreeView" id="tree_questions">
+                <property name="visible">True</property>
+                <property name="search_column">1</property>
+                <signal name="row_activated" handler="on_tree_questions_row_activated"/>
+              </widget>
+            </child>
           </widget>
           <packing>
             <property name="position">1</property>
@@ -132,59 +140,16 @@
             <property name="n_rows">4</property>
             <property name="n_columns">2</property>
             <child>
-              <widget class="GtkLabel" id="label1">
-                <property name="visible">True</property>
-                <property name="label" translatable="yes">Respuestas</property>
-              </widget>
-            </child>
-            <child>
-              <widget class="GtkLabel" id="label2">
-                <property name="visible">True</property>
-                <property name="label" translatable="yes">OK?</property>
-              </widget>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="right_attach">2</property>
-                <property name="x_options"></property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkEntry" id="ent_answer1">
-                <property name="visible">True</property>
-              </widget>
-              <packing>
-                <property name="top_attach">1</property>
-                <property name="bottom_attach">2</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkEntry" id="ent_answer2">
-                <property name="visible">True</property>
-              </widget>
-              <packing>
-                <property name="top_attach">2</property>
-                <property name="bottom_attach">3</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkEntry" id="ent_answer3">
-                <property name="visible">True</property>
-              </widget>
-              <packing>
-                <property name="top_attach">3</property>
-                <property name="bottom_attach">4</property>
-              </packing>
-            </child>
-            <child>
-              <widget class="GtkRadioButton" id="radio_ok1">
+              <widget class="GtkRadioButton" id="radio_ok3">
                 <property name="visible">True</property>
                 <property name="draw_indicator">True</property>
+                <property name="group">radio_ok1</property>
               </widget>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="right_attach">2</property>
-                <property name="top_attach">1</property>
-                <property name="bottom_attach">2</property>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
                 <property name="x_options">GTK_FILL</property>
               </packing>
             </child>
@@ -203,18 +168,61 @@
               </packing>
             </child>
             <child>
-              <widget class="GtkRadioButton" id="radio_ok3">
+              <widget class="GtkRadioButton" id="radio_ok1">
                 <property name="visible">True</property>
                 <property name="draw_indicator">True</property>
-                <property name="group">radio_ok1</property>
               </widget>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="right_attach">2</property>
-                <property name="top_attach">3</property>
-                <property name="bottom_attach">4</property>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
                 <property name="x_options">GTK_FILL</property>
               </packing>
+            </child>
+            <child>
+              <widget class="GtkEntry" id="ent_answer3">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkEntry" id="ent_answer2">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkEntry" id="ent_answer1">
+                <property name="visible">True</property>
+              </widget>
+              <packing>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">OK?</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="x_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Respuestas</property>
+              </widget>
             </child>
           </widget>
           <packing>
