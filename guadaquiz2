@@ -20,15 +20,16 @@ import Gui
 
 def main():
 
-  gui=Gui.Gui()
 
   questionfile=""
   appdir=os.path.dirname(sys.argv[0])
   questionfiles=os.listdir(appdir+"/questions")
+  print "Using: "+appdir+"/questions\n"
 
   ok=0
   wrong=0
 
+  gui=Gui.Gui(appdir)
   gui.show_intro()
 
   while 1:
@@ -64,7 +65,8 @@ def main():
    elif answer == "C":
       show = answer3
    gui.show_result(show,answer,right_answer)
-
+   
+   print "OK:",ok," ERRORS:",wrong,"\n"
  
 
 if __name__ == '__main__': main()

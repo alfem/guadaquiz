@@ -1,10 +1,11 @@
+
 import pygame
 from pygame.locals import *
 
 import os
 
-def load_image(name, colorkey=None):
-    fullname = os.path.join('images', name)
+def load_image(dir,name, colorkey=None):
+    fullname = os.path.join(dir,'images', name)
     try:
         image = pygame.image.load(fullname)
     except pygame.error, message:
@@ -17,12 +18,12 @@ def load_image(name, colorkey=None):
         image.set_colorkey(colorkey, RLEACCEL)
     return image, image.get_rect()
            
-def load_sound(name):
+def load_sound(dir,name):
     class NoneSound:
         def play(self): pass
     if not pygame.mixer:
         return NoneSound()
-    fullname = os.path.join('sounds', name)
+    fullname = os.path.join(dir,'sounds', name)
     try:
         sound = pygame.mixer.Sound(fullname)
     except pygame.error, message:

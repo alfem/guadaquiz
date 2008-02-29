@@ -9,18 +9,18 @@ class Gui:
   '''
   Screen graphics and sounds are embedded in this class
   '''
-  def __init__(self): 
+  def __init__(self,appdir): 
     resolution=width,height=1024,768
-    self.player_pos=[190,404,620,835]
 
     pygame.init()
 #    pygame.mouse.set_visible(0)
     self.screen=pygame.display.set_mode(resolution,pygame.FULLSCREEN)
 #    self.screen=pygame.display.set_mode(resolution)
   
-    self.snd_right=Tools.load_sound("ok.ogg")
-    self.snd_wrong=Tools.load_sound("wrong.ogg")
-    self.snd_click=Tools.load_sound("press.ogg")
+    self.snd_startup=Tools.load_sound(appdir,"startup.ogg")
+    self.snd_right=Tools.load_sound(appdir,"ok.ogg")
+    self.snd_wrong=Tools.load_sound(appdir,"risa.ogg")
+    self.snd_click=Tools.load_sound(appdir,"click.ogg")
 
     self.fnt_title = pygame.font.Font(None, 80)
     self.fnt_question = pygame.font.Font(None, 45)
@@ -33,7 +33,7 @@ class Gui:
     self.color_right=(10,220,10)
     self.color_wrong=(220,10,10)
 
-    self.background,bg_rect = Tools.load_image("background.jpg")
+    self.background,bg_rect = Tools.load_image(appdir,"background.jpg")
     self.scoreboard_area=bg_rect
     self.scoreboard_area.top=700
       
@@ -46,8 +46,11 @@ class Gui:
 # SHOW INTRO
   def show_intro(self):
 
+    self.snd_startup.play()
     self.screen.blit(self.background, (0, 0))
     pygame.display.flip()
+    pygame.time.delay(3500)
+    
 
 
 # SHOW QUESTION
@@ -135,5 +138,5 @@ class Gui:
 
     pygame.display.flip()
        
-    pygame.time.delay(3000)
+    pygame.time.delay(3500)
         
