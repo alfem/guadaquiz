@@ -77,6 +77,7 @@ class Gui:
  
 # WAIT FOR ANSWERS 
   def wait_for_answers(self):
+    choice=""
     pygame.event.clear()
     while 1:
       event=pygame.event.poll()
@@ -96,7 +97,7 @@ class Gui:
             self.screen.blit(self.background, self.rect_a2,self.rect_a2)
             self.screen.blit(self.background, self.rect_a1,self.rect_a1)
             choice="C"
-         if choice > 0:
+         if choice != "":
             pygame.display.flip()
             return choice
 
