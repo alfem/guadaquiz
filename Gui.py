@@ -27,8 +27,8 @@ class Gui:
     self.fnt_answer = pygame.font.Font(None, 35)
     self.fnt_score = pygame.font.Font(None, 32)
 
-    self.color1=(50,50,140)
-    self.color2=(255,192,22)
+    self.color1=(50,90,90)
+    self.color2=(255,218,70)
     self.color3=(250,250,255)
     self.color_right=(10,220,10)
     self.color_wrong=(220,10,10)
@@ -63,16 +63,16 @@ class Gui:
     textpos = text.get_rect(left=50,top=100)
     self.screen.blit(text, textpos)
 
-    text = self.fnt_answer.render(a1, 1, self.color2)
-    self.screen.fill(self.color3, self.rect_a1)
+    text = self.fnt_answer.render(a1, 1, self.color1)
+    self.screen.fill(self.color2, self.rect_a1)
     self.screen.blit(text, self.rect_a1.move(10,50))
 
-    text = self.fnt_answer.render(a2, 1, self.color2)
-    self.screen.fill(self.color3, self.rect_a2)
+    text = self.fnt_answer.render(a2, 1, self.color1)
+    self.screen.fill(self.color2, self.rect_a2)
     self.screen.blit(text, self.rect_a2.move(10,50))
 
-    text = self.fnt_answer.render(a3, 1, self.color2)
-    self.screen.fill(self.color3, self.rect_a3)
+    text = self.fnt_answer.render(a3, 1, self.color1)
+    self.screen.fill(self.color2, self.rect_a3)
     self.screen.blit(text, self.rect_a3.move(10,50))
 
     pygame.display.flip()
