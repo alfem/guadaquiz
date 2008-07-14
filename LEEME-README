@@ -1,0 +1,28 @@
+
+Guadaquiz es un juego simple de preguntas y respuestas (tipo 'trivial').
+
+Está orientado a la realización de concursos rápidos en eventos de software
+libre, aunque se puede usar igualmente como recurso educativo o para pasar 
+el rato en casa.
+
+La interfaz es muy sencilla. Se puede utilizar un ratón normal, pero 
+originalmente se pensó para montar un juego con una pantalla táctil.
+
+Los ficheros que encontrarás son:
+
+    * Andatuz-Pregunta.png	Imagen para la versión 1 del juego
+    * guadaquiz.png		Imagen para la versión 1 del juego
+    * guadaquiz.glade		Interfaz para la versión 1 del juego
+    * guadaquiz.py		Versión 1 del juego (python y glade)
+    * guadaquiz2		Versión 2 del juego (python y pygame)
+    * queditor.glade		Interfaz para el editor de preguntas
+    * queditor.py		Editor de Preguntas
+    * questions/		Directorio de preguntas
+    * Gui.py			Clase para el juego
+    * Tools.py			Clase para el juego
+    * images/			Directorio de imagenes para la versión 2
+    * sounds/			Directorio de sonidos
+
+La primera versión (guadaquiz1.py) usaba una interfaz hecha con Glade, pero 
+para la nueva versión (guadaquiz2) la he pasado a pygame que es más vistoso.
+
