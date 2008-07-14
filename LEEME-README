@@ -26,3 +26,12 @@ Los ficheros que encontrarás son:
 La primera versión (guadaquiz1.py) usaba una interfaz hecha con Glade, pero 
 para la nueva versión (guadaquiz2) la he pasado a pygame que es más vistoso.
 
+COMO SE JUEGA
+
+No hay mucho que explicar. El programa selecciona al azar una pregunta, la
+muestra y a continuación muestras tres posibles respuestas. Sólo hay que
+pulsar con el ratón en alguna de las tres para oir un sonido que indica si
+acertamos o no.
+
+Para salir, hay que pulsar el botón central del ratón (o los otros dos al
+mismo tiempo).
