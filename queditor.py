@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf8 -*-
 
 # queditor 1.0.0
 # author: Alfonso E.M. alfonso@el-magnifico.org
