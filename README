@@ -10,10 +10,6 @@ originalmente se pensó para montar un juego con una pantalla táctil.
 
 Los ficheros que encontrarás son:
 
-    * Andatuz-Pregunta.png	Imagen para la versión 1 del juego
-    * guadaquiz.png		Imagen para la versión 1 del juego
-    * guadaquiz.glade		Interfaz para la versión 1 del juego
-    * guadaquiz.py		Versión 1 del juego (python y glade)
     * guadaquiz2		Versión 2 del juego (python y pygame)
     * queditor.glade		Interfaz para el editor de preguntas
     * queditor.py		Editor de Preguntas
@@ -23,7 +19,7 @@ Los ficheros que encontrarás son:
     * images/			Directorio de imagenes para la versión 2
     * sounds/			Directorio de sonidos
 
-La primera versión (guadaquiz1.py) usaba una interfaz hecha con Glade, pero 
+La primera versión usaba una interfaz hecha con Glade, pero 
 para la nueva versión (guadaquiz2) la he pasado a pygame que es más vistoso.
 
 COMO SE JUEGA
