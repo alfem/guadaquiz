@@ -10,12 +10,12 @@ class Gui:
   Screen graphics and sounds are embedded in this class
   '''
   def __init__(self,appdir): 
-    resolution=width,height=1024,768
+    self.resolution=width,height=1024,768
 
     pygame.init()
 #    pygame.mouse.set_visible(0)
     self.screen=pygame.display.set_mode(resolution,pygame.FULLSCREEN)
-#    self.screen=pygame.display.set_mode(resolution)
+#    self.screen=pygame.display.set_mode(self.resolution)
   
     self.snd_startup=Tools.load_sound(appdir,"startup.ogg")
     self.snd_right=Tools.load_sound(appdir,"ok.ogg")
@@ -59,8 +59,11 @@ class Gui:
     self.screen.blit(self.background,(0,0),(0,0,1024,700))
     pygame.display.flip()
 
+    shadow = self.fnt_question.render(q, 1, self.color2)
+    textpos = shadow.get_rect(left=38,top=68)
+    self.screen.blit(shadow, textpos)
     text = self.fnt_question.render(q, 1, self.color1)
-    textpos = text.get_rect(left=50,top=100)
+    textpos = text.get_rect(left=40,top=70)
     self.screen.blit(text, textpos)
 
     text = self.fnt_answer.render(a1, 1, self.color1)
@@ -84,6 +87,13 @@ class Gui:
     pygame.event.clear()
     while 1:
       event=pygame.event.poll()
+      
+      if (event.type is KEYDOWN and event.key == K_f):
+          if self.screen.get_flags() & FULLSCREEN:
+             pygame.display.set_mode(self.resolution)
+          else:
+             pygame.display.set_mode(self.resolution, FULLSCREEN)
+             
       buttons=pygame.mouse.get_pressed()
       if buttons[0]:
          self.snd_click.play()
